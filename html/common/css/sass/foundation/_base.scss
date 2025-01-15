@@ -1,0 +1,43 @@
+// Foundation: base.scss
+@import 'normalize.css';
+*,
+*::before,
+*::after {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+p, h1, h2, h3, h4, h5, h6, span, a, li, blockquote, pre, code, strong, em, label, dt, dd, cite, small, abbr, kbd, sup, sub {
+  line-height: 1.6;
+}
+html {
+  height: 100%;
+} 
+body {
+  font-size: 16px;
+  font-family: "Roboto", "Noto Sans JP", Arial, "Hiragino Kaku Gothic ProN",
+    "Hiragino Sans", Meiryo, sans-serif;
+  width: 100%;
+}
+a {
+  text-decoration: none;
+}
+ul,ol {
+  list-style: none;
+}
+button {
+  padding: 0;
+  border: none;
+  outline: none;
+  font: inherit;
+  color: inherit;
+  background: none
+}
+:where(button, [type='button'], [type='reset'], [type='submit']) {
+  touch-action: manipulation;
+}
+.all-wrap {
+  overflow-x: clip;
+  position: relative;
+  min-height: 100vh;
+}

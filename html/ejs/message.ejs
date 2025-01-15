@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="ja">
+<%- include('components/head',{ title: "メッセージ"}) %>
+
+<body >  
+  <div class="all-wrap">
+    <%- include('components/header') %>
+    <main>
+      <section class="c-sub-mv">
+        <h2 class="c-sub-mv__ttl">メッセージ</h2>
+      </section>
+
+      <section class="p-message l-container">
+        <h3 class="p-message__ttl">
+          「仕事」をきっかけに<br>人生の新しいスタートを！
+        </h3>
+        <p class="p-message__sub-ttl">大事なお仕事探しを応援させてください</p>
+        <div class="p-message__wrap">
+          <div class="p-message__img-wrap">
+            <img src="common/img/ceo.jpg" alt="ショーン・デイビット・ジュニア" class="p-message__img">
+          </div>
+          <p class="p-message__text">
+            はじめまして。代表取締役社長のショーン・デイビット・ジュニアです。<br>
+            私はそこそこ幸せです。それは仕事が楽しいからです。もちろん仕事イコール人生ではありません。でも仕事は人生の大事な基盤のように思っています。<br>
+            株式会社STARTは、みなさんが仕事をきっかけに理想の人生を実現する手助けをしています。幸せにつながるお仕事紹介サービス<a href="#">『スタート』</a>や、共通の目標を目指す仲間が見つかる人材紹介SNS<a href="#">『ゴール』</a>を運営しています。また、Webデザインの基礎スキルを身につけられるスクール<a href="#">『Webの学校』</a>も随時開講しています。
+          </p>
+        </div>
+        <img src="common/img/office.jpg" alt="" class="p-message__office">
+      </section>
+    </main>
+    <%- include('components/footer') %>
+    <%- include('components/script') %>
+  </div>
+</body>
+</html>

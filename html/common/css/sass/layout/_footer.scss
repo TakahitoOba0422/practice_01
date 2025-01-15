@@ -1,0 +1,36 @@
+@use "../foundation/variable" as *;
+@use "../foundation/base" as *;
+
+.l-footer {
+  margin-top: 100px;
+  padding-block: 50px;
+  background-color: $mainColor;
+  @include mq('md') {
+    margin-top: 60px;
+    padding-block: 40px 29px;
+  }
+  &__list {
+    display: flex;
+    justify-content: flex-start;
+    column-gap: 40px;
+    margin-bottom: 16px;
+    @include mq('md') {
+      flex-wrap: wrap;
+      column-gap: 25px;
+    }
+  }
+  &__link {
+    font-size: .875em;
+    color: $baseColor;
+    @include mq('md') {
+      font-size: .75em;
+    }
+  }
+  &__copy {
+    font-size: .75em;
+    color: $baseColor;
+    @include mq('md') {
+      font-size: .625em
+    }
+  }
+}

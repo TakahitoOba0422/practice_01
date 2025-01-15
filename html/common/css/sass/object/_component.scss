@@ -1,0 +1,263 @@
+@use "../foundation/variable" as *;
+@use "../foundation/base" as *;
+
+// global navigation --------------------
+.gnav {
+  margin-top: 2px;
+  @include mq('md') {
+    display: none;
+    height: 100%;
+    width: 100%;
+    margin-top: 0;
+    position: absolute;
+    top: 0;
+    left: 0;
+    z-index: 100;
+    transition: display .6s ease;
+    transition-behavior: allow-discrete;
+  }
+  &__list {
+    display: flex;
+    list-style: none;
+    column-gap: 19px;
+    @include mq('md') {
+      height: 100%;
+      min-width: 200px;
+      padding-top: 94px;
+      padding-left: 40px;
+      flex-direction: column;
+      row-gap: 25px;
+      background-color: $mainColor;
+      position: absolute;
+      top: 0;
+      right: 0;
+      translate: 100% 0;
+      transition: translate .6s ease;
+    }
+  }
+  &__link {
+    color: $fontColor;
+    font-size: 1em;
+    font-weight: bold;
+    letter-spacing: .05rem;
+    @include mq('md') {
+      color: $baseColor;
+    }
+    &.active {
+      color: $mainColor;
+      @include mq('md') {
+        color: #EF90A4;
+      }
+    }
+  }
+}
+.is-active {
+  .gnav {
+    @include mq('md') {
+      display: block;
+      transition: display .6s ease;
+      transition-behavior: allow-discrete;
+    }
+    &__list {
+      @include mq('md') {
+        translate: 0 0;
+        transition: translate .6s ease;
+        @starting-style {
+          translate: 100% 0;
+        }
+      }
+    }
+  }
+}
+
+// ttl --------------------
+.c-sec-ttl {
+  font-size: 2.5em;
+  font-weight: bold;
+  color: $mainColor;
+  @include mq('md') {
+    font-size: 2em;
+    margin-bottom: 15px;
+  }
+}
+
+// btn --------------------
+// humburger menu btn
+.btn-menu {
+  display: none;
+  @include mq('md') {
+    display: inline-block;
+    width: 60px;
+    height: 60px;
+    background-color: $mainColor;
+    position: relative;
+    z-index: 101;
+    &__line {
+      width: 26px;
+      height: 2px;
+      background-color: $baseColor;
+      border-radius: calc(1px / 0);
+      position: absolute;
+      top: 50%;
+      left: 50%;
+      translate: -50% -50%;
+      transition: background-color .3s ease;
+       &::before, &::after {
+        content: "";
+        display: inline-block;
+        width: 100%;
+        height: 2px;
+        background-color: $baseColor;
+        border-radius: calc(1px / 0);
+        position: absolute;
+        left: 50%;
+        translate: -50% 0;
+        transition: rotate .3s ease, top .3s ease, bottom .3s ease;
+      }
+      &::before {
+        top: -8px;
+      }
+      &::after {
+        bottom: -8px;
+      }
+    }
+  }
+}
+.is-active {
+  .btn-menu {
+    &__line {
+      background-color: transparent;
+      transition: background-color .3s ease;
+      &::before, &::after {
+        transition: rotate .3s ease, top .3s ease, bottom .3s ease;
+      }
+      &::before {
+        top: 0;
+        rotate: .125turn;
+      }
+      &::after {
+        bottom: 0;
+        rotate: -.125turn;
+      }
+    }
+  }
+}
+
+// news --------------------
+.c-news {
+  &__item {
+    display: flex;
+    align-items: flex-start;
+    column-gap: 40px;
+    padding-bottom: 16px;
+    border-bottom: 1px solid #EDEDED;
+    @include mq('md') {
+      flex-direction: column;
+      padding-bottom: 14px;
+    }
+    &:not(:last-of-type) {
+      margin-bottom: 15px;
+    }
+    &-time {
+      font-size: .9375em;
+    }
+    &-text {
+      flex: 1;
+    }
+    &-link {
+      font-size: .9375em;
+      color: $fontColor;
+    }
+  }
+}
+
+// card --------------------
+.c-card {
+  background-color: $baseColor;
+  border-radius: 8px;
+  box-shadow: 0px 3px 21px 0px rgba(0, 0, 0, 0.16);
+  &__list {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 30px;
+    margin-top: 32px;
+    @include mq('md') {
+      grid-template-columns: 1fr;
+      margin-top: 20px;
+      gap: 20px;
+    }
+  }
+  &__inner {
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+    padding: 50px;
+    @include mq('md') {
+      padding: 40px 30px;
+    }
+  }
+  &__ttl {
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+    row-gap: 3px;
+    font-size: 1.125em;
+    font-weight: bold;
+    margin-bottom: 9px;
+    @include mq('md') {
+      row-gap: 5px;
+      font-size: 1em;
+    }
+    &::before {
+      content: "";
+      display: inline-block;
+      width: 48px;
+      aspect-ratio: 1 / 1;
+      background: no-repeat top left / 48px;
+      @include mq('md') {
+        width: 60px;
+        background-size: 60px;
+      }
+    }
+    &.human {
+      &::before {
+        background-image: url(../img/human.png);
+      }
+    }
+    &.school {
+      &::before {
+        background-image: url(../img/school.png);
+      }
+    }
+    &.media {
+      &::before {
+        background-image: url(../img/media.png);
+      }
+    }
+  }
+  &__txt {
+    font-size: .875em;
+  }
+}
+
+// sub mv --------------------
+.c-sub-mv {
+  width: 100%;
+  height: 190px;
+  background: url("#{$imgDir}/pc_mv.jpg") center;
+  display: grid;
+  place-items: center;
+  @include mq('md') {
+    height: 160px;
+    background-size: cover;
+  }
+  &__ttl {
+    display: inline-block;
+    font-size: 2.5em;
+    color: #fff;
+    letter-spacing: .1rem;
+    @include mq('md') {
+      font-size: 1.75em;
+    }
+  }
+}

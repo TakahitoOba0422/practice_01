@@ -1,0 +1,12 @@
+@use "../foundation/variable" as *;
+@use "../foundation/base" as *;
+
+.l-container {
+  max-width: $minPcWidth;
+  margin-inline: auto;
+  position: relative;
+  @include mq('md') {
+    width: 100%;
+    padding-inline: 20px;
+  }
+}

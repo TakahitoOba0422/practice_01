@@ -1,0 +1,26 @@
+// color
+$baseColor: #fff;
+$mainColor: #DD1B57;
+$grayColor: #F2F2F2;
+$fontColor: #151515;
+
+// ブレイクポイント
+$breakpoints: (
+    'sm': 'screen and (max-width: 576px)',
+    'md': 'screen and (max-width: 768px)',
+    'lg': 'screen and (max-width: 992px)',
+    'xl': 'screen and (max-width: 1200px)',
+) !default;
+
+// 画像格納ディレクトリ
+$imgDir: '../img/';
+
+// PCレイアウト時の最小横幅
+$minPcWidth: 1110px;
+
+// mixin
+@mixin mq($breakpoint) {
+  @media #{map-get($breakpoints, $breakpoint)} {
+    @content;    
+  }
+}

@@ -1,0 +1,12 @@
+@use "../foundation/variable" as *;
+@use "../foundation/base" as *;
+
+// layout
+@use "../layout/header" as *;
+@use "../layout/container" as *;
+@use "../layout/footer" as *;
+
+// object
+@use "../object/component" as *;
+@use "../object/project" as *;
+@use "../object/utility" as *;

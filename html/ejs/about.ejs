@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html lang="ja">
+<%- include('components/head',{ title: "会社概要"}) %>
+
+<body >  
+  <div class="all-wrap">
+    <%- include('components/header') %>
+    <main>
+      <section class="c-sub-mv">
+        <h2 class="c-sub-mv__ttl">会社概要</h2>
+      </section>
+
+      <section class="p-about l-container">
+        <div class="p-about__content">
+          <dl class="p-about__item">
+            <dt class="p-about__item-ttl">社名</dt>
+            <dd class="p-about__item-txt">株式会社START</dd>
+          </dl>
+          <dl class="p-about__item">
+            <dt class="p-about__item-ttl">設立</dt>
+            <dd class="p-about__item-txt">2025.02.10</dd>
+          </dl>
+          <dl class="p-about__item">
+            <dt class="p-about__item-ttl">代表取締役</dt>
+            <dd class="p-about__item-txt">ショーン・デイビット・ジュニア</dd>
+          </dl>
+          <dl class="p-about__item">
+            <dt class="p-about__item-ttl">資本金</dt>
+            <dd class="p-about__item-txt">10,000,000円</dd>
+          </dl>
+          <dl class="p-about__item">
+            <dt class="p-about__item-ttl">所在地</dt>
+            <dd class="p-about__item-txt">〒555-5555 東京都千代田区 スタートビルディング 606</dd>
+          </dl>
+        </div>
+        
+        <div class="p-about__map">
+          <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3240.828030380878!2d139.76493611544558!3d35.68123618019435!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x60188bfbd89f700b%3A0x277c49ba34ed38!2z5p2x5Lqs6aeF!5e0!3m2!1sja!2sjp!4v1603888975255!5m2!1sja!2sjp" width="100%" height="auto" frameborder=" 0" style="border:0;" allowfullscreen="" aria-hidden="false" tabindex="0"></iframe>
+          <p class="p-about__map-txt">
+            <a class="p-about__map-link" href="https://goo.gl/maps/b5AqA853AfsPSw1Y7">Google mapで見る</a></p>
+          </p>
+        </div>
+        
+        <div class="p-about__news">
+          <ul class="c-news">
+            <li class="c-news__item">
+              <p class="c-news__item-time">2023.02.10</p>
+              <p class="c-news__item-text">
+                <a href="@" class="c-news__item-link">
+                  コーポレートサイトをリニューアルしました。
+                </a>
+              </p>
+            </li>
+            <li class="c-news__item">
+              <p class="c-news__item-time">2023.02.08</p>
+              <p class="c-news__item-text">
+                <a href="@" class="c-news__item-link">
+                  採用を強化中です！一緒に働きませんか？
+                </a>
+              </p>
+            </li>
+            <li class="c-news__item">
+              <p class="c-news__item-time">2022.02.02</p>
+              <p class="c-news__item-text">
+                <a href="@" class="c-news__item-link">
+                  人材紹介SNS『スタート』をリリースしました。3/31まで新規登録キャンペーンを開催中です！サービス内で使える500ポイントをプレゼント！
+                </a>
+              </p>
+            </li>
+          </ul>
+        </div>
+      </section>
+    </main>
+    <%- include('components/footer') %>
+    <%- include('components/script') %>
+  </div>
+</body>
+</html>

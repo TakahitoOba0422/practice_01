@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html lang="ja">
+<%- include('components/head', { title: "" }) %>
+
+<body>  
+  <div class="all-wrap">
+    <%- include('components/header') %>
+    <main>
+      <div class="p-top-mv">
+        <div class="p-top-mv__inner">
+          <h2 class="p-top-mv__ttl">START</h2>
+          <p class="p-top-mv__txt">仕事に最高のスタートを。</p>
+        </div>
+      </div>
+
+      <section class="p-top-news l-container">
+        <h2 class="c-sec-ttl">ニュース</h2>
+        <ul class="c-news">
+          <li class="c-news__item">
+            <p class="c-news__item-time">2023.02.10</p>
+            <p class="c-news__item-text">
+              <a href="@" class="c-news__item-link">
+                コーポレートサイトをリニューアルしました。
+              </a>
+            </p>
+          </li>
+          <li class="c-news__item">
+            <p class="c-news__item-time">2023.02.08</p>
+            <p class="c-news__item-text">
+              <a href="@" class="c-news__item-link">
+                採用を強化中です！一緒に働きませんか？
+              </a>
+            </p>
+          </li>
+          <li class="c-news__item">
+            <p class="c-news__item-time">2022.02.02</p>
+            <p class="c-news__item-text">
+              <a href="@" class="c-news__item-link">
+                人材紹介SNS『スタート』をリリースしました。3/31まで新規登録キャンペーンを開催中です！サービス内で使える500ポイントをプレゼント！
+              </a>
+            </p>
+          </li>
+        </ul>
+      </section>
+
+      <section class="p-top-service l-container">
+        <h2 class="c-sec-ttl">サービス</h2>
+        <ul class="c-card__list">
+          <li class="c-card">
+            <dl class="c-card__inner">
+              <dt class="c-card__ttl human">人材紹介業</dt>
+              <dd class="c-card__txt">
+                新規サイトの制作はもちろんサイトリニューアルやランディングページの制作も可能です。
+              </dd>
+              </dl>
+          </li>
+
+          <li class="c-card">
+            <dl class="c-card__inner">
+              <dt class="c-card__ttl school">スクール事業</dt>
+              <dd class="c-card__txt">
+                オンラインでWeb制作を学べるスクールを運営しています。
+              </dd>
+              </dl>
+          </li>
+
+          <li class="c-card">
+            <dl class="c-card__inner">
+              <dt class="c-card__ttl media">Webメディア運営</dt>
+              <dd class="c-card__txt">
+                人事系メディアやWebデザイン関連のメディアなどを複数運営しています。
+              </dd>
+              </dl>
+          </li>
+        </ul>
+      </section>
+    </main>
+    <%- include('components/footer') %>
+    <%- include('components/script') %>
+  </div>
+</body>
+</html>
